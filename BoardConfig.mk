@@ -92,14 +92,14 @@ BOARD_KERNEL_CMDLINE += androidboot.memcg=1
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_CMDLINE += console=ttyMSM0,115200n8
 BOARD_KERNEL_CMDLINE += earlycon=msm_geni_serial,0x880000
-BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1
 BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=1
 BOARD_KERNEL_CMDLINE += msm_rtb.filter=0x237
 BOARD_KERNEL_CMDLINE += video=vfb:640x400,bpp=32,memsize=3072000
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
 
-KERNEL_LD := LD=ld.lld
+#KERNEL_LD := LD=ld.lld
 TARGET_COMPILE_WITH_MSM_KERNEL := true
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := mojito_defconfig
@@ -152,7 +152,7 @@ BOARD_USES_QCOM_HARDWARE := true
 # Recovery
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.default
+#TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.default
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
@@ -178,7 +178,7 @@ BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Inherit from the proprietary version
-include vendor/xiaomi/mojito/BoardConfigVendor.mk
+#include vendor/xiaomi/mojito/BoardConfigVendor.mk
 
 # Inherit Prebuilt Vendor Images
-include vendor/xiaomi/mojito-vendor/BoardConfig.mk
+#include vendor/xiaomi/mojito-vendor/BoardConfig.mk

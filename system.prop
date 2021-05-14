@@ -72,3 +72,6 @@ ro.hardware.wlan.vendor=qcom
 # Xiaomi
 ro.fota.oem=Xiaomi
 ro.product.mod_device=mojito_global
+
+#wrappedkey
+fbe.metadata.wrappedkey=true
