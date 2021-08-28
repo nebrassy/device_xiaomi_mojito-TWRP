@@ -159,9 +159,9 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # SELinux
-include device/qcom/sepolicy/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+#include device/qcom/sepolicy/SEPolicy.mk
+#BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+#BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
